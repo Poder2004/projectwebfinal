@@ -3,7 +3,8 @@ CREATE TABLE User (
     email VARCHAR(255) NOT NULL UNIQUE,
     username VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
-    full_name VARCHAR(255) NOT NULL,
+    first_name VARCHAR(255) NOT NULL,
+    last_name VARCHAR(255) NOT NULL,
     date_of_birth DATE,
     gender ENUM('Male', 'Female', 'Other'),
     address VARCHAR(255)
@@ -17,7 +18,7 @@ CREATE TABLE Activity (
     location VARCHAR(255) NOT NULL,
     description TEXT,
     uid INT NOT NULL,
-    status ENUM('ได้รับ', 'ไม่ได้รับ') NOT NULL,
+    status ENUM('เปิดรับรับ', 'ปิดรับรับ') NOT NULL,
     FOREIGN KEY (uid) REFERENCES User(uid) ON DELETE CASCADE
 );
 
