@@ -1,0 +1,17 @@
+-- Insert into User table
+INSERT INTO User (email, username, password, first_name, last_name, date_of_birth, gender, address)
+VALUES
+('john.doe@example.com', 'johndoe1', '1', 'John', 'Doe', '1990-05-15', 'Male', '123 Main St, Bangkok'),
+('jane.smith@example.com', 'janesmith2', '2', 'Jane', 'Smith', '1985-08-22', 'Female', '456 Elm St, Chiang Mai'),
+('alex.brown@example.com', 'alexbrown3', '3', 'Alex', 'Brown', '1995-02-10', 'Other', '789 Oak St, Phuket'),
+('mike.jones@example.com', 'mikejones4', '4', 'Mike', 'Jones', '1988-12-05', 'Male', '321 Maple St, Pattaya'),
+('lisa.white@example.com', 'lisawhite5', '5', 'Lisa', 'White', '1992-07-30', 'Female', '654 Pine St, Hua Hin');
+
+-- Insert into Activity table
+INSERT INTO Activity (name, start_date, start_time, location, description, uid, status)
+VALUES
+('Morning Yoga', '2025-03-10', '06:30:00', 'Lumphini Park, Bangkok', 'A relaxing morning yoga session in the park.', 1, 'เปิดรับรับ'),
+('Beach Cleanup', '2025-03-15', '08:00:00', 'Patong Beach, Phuket', 'Join us in cleaning up the beach.', 2, 'เปิดรับรับ'),
+('Tech Workshop', '2025-03-20', '14:00:00', 'Co-Working Space, Chiang Mai', 'Learn about the latest tech trends.', 3, 'ปิดรับรับ'),
+('Food Festival', '2025-03-25', '11:00:00', 'Central World, Bangkok', 'Enjoy delicious street food and local delicacies.', 4, 'เปิดรับรับ'),
+('Charity Run', '2025-04-05', '07:00:00', 'Suan Luang Rama IX, Bangkok', 'A charity marathon to support local communities.', 5, 'เปิดรับรับ');
