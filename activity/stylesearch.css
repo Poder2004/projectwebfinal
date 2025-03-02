@@ -1,0 +1,67 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('bk.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+/* ✅ ปรับกล่องผลลัพธ์ให้มีขอบมน */
+.search-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ ปรับการ์ดกิจกรรมให้มีขอบมนและเงา */
+.event-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ✅ ทำให้การ์ดเด้งขึ้นเล็กน้อยเมื่อโฮเวอร์ */
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-join {
+    background-color: #28a745;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    width: 120px;
+    height: 40px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* เอฟเฟกต์เมื่อ Hover */
+.btn-join:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+
+.btn-secondary {
+    background: #6c757d;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+.btn-secondary:hover {
+    background: #545b62;
+}

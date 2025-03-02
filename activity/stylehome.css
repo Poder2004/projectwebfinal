@@ -1,0 +1,198 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFE9D7;
+    /* สีพื้นหลัง */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 100px;
+    width: 90%;
+    height: 100%;
+    background: url('logoweb-Noback.png') center/cover no-repeat;
+    opacity: 0.2;
+    /* ปรับค่าความโปร่งใส (0.0 = ใสสุด, 1.0 = ทึบสุด) */
+    z-index: -1;
+    /* ทำให้เป็นพื้นหลัง */
+}
+
+.title {
+    position: absolute;
+    top: 100px;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.text-content {
+    width: 40%;
+    font-family: Nunito;
+}
+
+.text-content h1 {
+    font-weight: bold;
+    color: #1F2937;
+    font-size: 60px;
+}
+
+.create-button {
+    display: inline-block; /* ทำให้ `<a>` มีขนาดเหมือนปุ่ม */
+    background-color: #FF7F50; /* สีพื้นหลัง */
+    color: white; /* สีข้อความ */
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none; /* ✅ ลบขีดเส้นใต้ */
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.create-button:hover {
+    background-color: #FF6347; /* สีพื้นหลังเปลี่ยนเมื่อโฮเวอร์ */
+    color: rgb(150, 255, 14);
+}
+
+
+.image-container {
+    display: flex;
+    gap: 20px;
+}
+
+.basketball-image,
+.guitar-image,
+.boy-image,
+.ball-image {
+    width: 200px;
+    height: auto;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+.event-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* จัดปุ่มให้อยู่ตรงกลางแนวนอน */
+    justify-content: space-between;
+    /* ให้เนื้อหาเว้นช่องว่างแบบสมดุล */
+}
+
+.event-card:hover {
+    transform: scale(1.02);
+}
+
+.event-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.btn-join {
+    background-color: #28a745;
+    /* สีพื้นหลังของปุ่ม */
+    color: white;
+    /* สีตัวอักษร */
+    border-radius: 20px;
+    /* ทำให้ขอบมน */
+    padding: 10px 20px;
+    /* ปรับขนาดพื้นที่ขอบของปุ่ม */
+    text-decoration: none;
+    /* ลบขีดเส้นใต้ */
+    text-align: center;
+    /* จัดข้อความตรงกลาง */
+    display: inline-block;
+    /* ให้ปุ่มมีขนาดตามเนื้อหา */
+    font-size: 16px;
+    width: 120px;
+    /* ปรับขนาดปุ่ม */
+    height: 40px;
+    font-weight: bold;
+    /* ทำให้ตัวอักษรดูโดดเด่น */
+    border: none;
+    /* เอาเส้นขอบออก */
+    cursor: pointer;
+    /* ทำให้เป็นเมาส์ชี้เมื่อ hover */
+    transition: all 0.3s ease-in-out;
+    /* เพิ่มเอฟเฟกต์ลื่นไหล */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* เพิ่มเงา */
+}
+
+/* เอฟเฟกต์เมื่อ Hover */
+.btn-join:hover {
+    background-color: #218838;
+    /* เปลี่ยนสีเมื่อโฮเวอร์ */
+    transform: scale(1.05);
+    /* ขยายขนาดเล็กน้อย */
+}
+
+
+.basketball-image {
+    width: 400px;
+    height: 650px;
+
+    margin-top: 100px;
+    margin-left: 150px;
+
+}
+
+.guitar-image {
+    width: 460px;
+    height: 430px;
+    margin-top: 400px;
+    margin-left: -250px;
+}
+
+.boy-image {
+    width: 350px;
+    height: 600px;
+    margin-top: 500px;
+    margin-left: -80px;
+}
+
+.ball-image {
+    width: 400px;
+    height: 550px;
+    margin-top: 120px;
+    margin-left: -120px;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+h2 {
+    margin-top: -300px; /* ปรับค่าตามต้องการ */
+}
+
+h1 img {
+    width: 80px;
+    height: auto;
+    vertical-align: middle;
+    /* ทำให้ภาพอยู่ตรงกลางแนวตั้ง */
+    margin-left: 0px;
+}
