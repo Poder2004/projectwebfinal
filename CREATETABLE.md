@@ -18,7 +18,8 @@ CREATE TABLE Activity (
     location VARCHAR(255) NOT NULL,
     description TEXT,
     uid INT NOT NULL,
-    status ENUM('เปิดรับรับ', 'ปิดรับรับ') NOT NULL,
+    status ENUM('เปิดรับ', 'ปิดรับ') NOT NULL,
+    image VARCHAR(255),
     FOREIGN KEY (uid) REFERENCES User(uid) ON DELETE CASCADE
 );
 
