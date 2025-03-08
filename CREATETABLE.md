@@ -18,7 +18,7 @@ CREATE TABLE Activity (
     location VARCHAR(255) NOT NULL,
     description TEXT,
     uid INT NOT NULL,
-    status ENUM('เปิดรับ', 'ปิดรับ') NOT NULL,
+    status ENUM('เปิดรับ', 'ปิดรับ') NOT NULL DEFAULT 'เปิดรับ',
     image VARCHAR(255),
     FOREIGN KEY (uid) REFERENCES User(uid) ON DELETE CASCADE
 );
@@ -27,8 +27,10 @@ CREATE TABLE Registration (
     rid INT PRIMARY KEY AUTO_INCREMENT,
     uid INT NOT NULL,
     aid INT NOT NULL,
-    status ENUM('รออนุมัติ', 'อนุมัติ', 'ไม่อนุมัติ') NOT NULL,
+    status ENUM('รออนุมัติ', 'อนุมัติ', 'ไม่อนุมัติ') NOT NULL DEFAULT 'รออนุมัติ',
     date_join DATE NOT NULL,
+    verify ENUM('ยืนยัน', 'ไม่ยืนยัน') NOT NULL DEFAULT 'ไม่ยืนยัน',
     FOREIGN KEY (uid) REFERENCES User(uid) ON DELETE CASCADE,
     FOREIGN KEY (aid) REFERENCES Activity(aid) ON DELETE CASCADE
 );
+
