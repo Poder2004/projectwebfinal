@@ -1,4 +1,4 @@
-CREATE TABLE User (
+CREATE TABLE user (
     uid INT PRIMARY KEY AUTO_INCREMENT,
     email VARCHAR(255) NOT NULL UNIQUE,
     username VARCHAR(50) NOT NULL UNIQUE,
@@ -10,7 +10,7 @@ CREATE TABLE User (
     address VARCHAR(255)
 );
 
-CREATE TABLE Activity (
+CREATE TABLE activity (
     aid INT PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     start_date DATE NOT NULL,
@@ -23,14 +23,16 @@ CREATE TABLE Activity (
     FOREIGN KEY (uid) REFERENCES User(uid) ON DELETE CASCADE
 );
 
-CREATE TABLE Registration (
+CREATE TABLE registration (
     rid INT PRIMARY KEY AUTO_INCREMENT,
     uid INT NOT NULL,
     aid INT NOT NULL,
     status ENUM('รออนุมัติ', 'อนุมัติ', 'ไม่อนุมัติ') NOT NULL DEFAULT 'รออนุมัติ',
     date_join DATE NOT NULL,
     verify ENUM('ยืนยัน', 'ไม่ยืนยัน') NOT NULL DEFAULT 'ไม่ยืนยัน',
-    FOREIGN KEY (uid) REFERENCES User(uid) ON DELETE CASCADE,
-    FOREIGN KEY (aid) REFERENCES Activity(aid) ON DELETE CASCADE
+    datetime_verify DATETIME NULL,
+    FOREIGN KEY (uid) REFERENCES user(uid) ON DELETE CASCADE,
+    FOREIGN KEY (aid) REFERENCES activity(aid) ON DELETE CASCADE
 );
+
 
